@@ -1,5 +1,5 @@
 package homework01;
 
-public class CVehicle {
+public abstract class CVehicle {
 
 }
