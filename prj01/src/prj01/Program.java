@@ -3,11 +3,12 @@ package prj01;
 public class Program {
 
 	public static void main(String[] args) {
-		System.out.println("-> "+new Object()+1+2+" x "+3*(4+5));
+		//System.out.println("-> "+new Object()+1+2+" x "+3*(4+5));
 		Point p = new Point(1,2);
 		Point p1 = new Point(1,1);
 		System.out.println(p);
 		System.out.println(p1);
+		/*
 		ColorPoint cp1 = new ColorPoint(2, 3, 333333);
 		ColorPointAgr cp2 = new ColorPointAgr(p, 444444);
 		System.out.println(cp1);
@@ -31,6 +32,7 @@ public class Program {
 		for (int i = 0; i < masObj.length; i++) {
 			System.out.println(masObj[i]);
 		}
+	*/
 	}
 
 }
