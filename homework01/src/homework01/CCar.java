@@ -2,8 +2,8 @@ package homework01;
 
 public class CCar extends CVehicle{
 	
-	public CCar(int x, int y, int price, int speed, int year) {
-		super(x, y, price, speed, year);
+	public CCar(String name, int x, int y, int price, int speed, int year) {
+		super(name, x, y, price, speed, year);
 
 	}
 

@@ -10,8 +10,8 @@ public class CPlane extends CVehicle{
 			height = 0;
 			passengers = 0;
 		}
-	public CPlane(int x, int y, int height, int price, int speed, int year, int passengers) {		
-			super(x, y, price, speed, year);
+	public CPlane(String name, int x, int y, int height, int price, int speed, int year, int passengers) {		
+			super(name, x, y, price, speed, year);
 			this.height=height;
 			this.passengers=passengers;
 		}

@@ -2,13 +2,13 @@ package prj01;
 
 public class Program {
 
-	public static void main(String[] args) {
-		//System.out.println("-> "+new Object()+1+2+" x "+3*(4+5));
+	public static void main(String[] args)  {
+		/*
+		System.out.println("-> "+new Object()+1+2+" x "+3*(4+5));
 		Point p = new Point(1,2);
 		Point p1 = new Point(1,1);
 		System.out.println(p);
 		System.out.println(p1);
-		/*
 		ColorPoint cp1 = new ColorPoint(2, 3, 333333);
 		ColorPointAgr cp2 = new ColorPointAgr(p, 444444);
 		System.out.println(cp1);
@@ -32,7 +32,23 @@ public class Program {
 		for (int i = 0; i < masObj.length; i++) {
 			System.out.println(masObj[i]);
 		}
-	*/
+		*/
+		PolyPointsDynamic poly = new PolyPointsDynamic();
+		
+		poly.add(new Point(5,9));
+		poly.add(new Point(6,5));
+		poly.add(new Point(2,5));
+		poly.add(new Point(9,5));
+		poly.add(new Point(19,15));
+		poly.add(new Point(1,5));
+		poly.add(new Point(11,51));
+	
+	//	for (int i = 0; i < poly.size(); i++) {
+	//		System.out.println(poly.get(i));
+	//	}
+		
+		poly.print();
+		
 	}
 
 }

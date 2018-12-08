@@ -1,11 +1,12 @@
 package homework01;
 
 public abstract class CVehicle {
+	private String name;
 	private int x;
 	private int y;
 	private int price;
 	private int speed;
-	private int year;
+	private int year;	
 	
 		public CVehicle() {
 			x = 0;
@@ -13,14 +14,22 @@ public abstract class CVehicle {
 			price = 0;
 			speed = 0;
 			year = 0;
+			name = "";
 		}
-	public CVehicle(int x, int y, int price, int speed, int year) {		
+	public CVehicle(String name, int x, int y, int price, int speed, int year) {		
 			this.x = x;
 			this.y = y;
 			this.price = price;
 			this.speed = speed;
 			this.year = year;
+			this.name = name;
 		}
+		public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 		public int getX() {
 			return x;
 		}
@@ -54,7 +63,7 @@ public abstract class CVehicle {
 		
 		@Override
 		public String toString() {
-			return "coordinates = x=" + x + ", y=" + y + ", price=" + price + ", speed=" + speed + ", year=" + year + "";
+			return "Name = "+ name + ", coordinates = x=" + x + ", y=" + y + ", price=" + price + ", speed=" + speed + ", year=" + year + "";
 		}
 
 }

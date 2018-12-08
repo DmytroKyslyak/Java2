@@ -1,13 +1,22 @@
 package homework01;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class CMain{
 	public static void main(String[] args) {
-		CCar car1 = new CCar(22,24,11000,350,2017);
-		CPlane plane1 = new CPlane(22,24,5000,11000,350,2015,250);
+		
+		CarList car = new CarList();
+		car.add(new CCar("BMW",22,24,11000,350,2013));
+		car.add(new CCar("VW",22,24,11000,350,2018));
+		car.add(new CCar("Audi",22,24,11000,350,2015));
+		car.add(new CCar("BMW",22,24,11000,350,2018));
+		/*
+		CCar car1 = new CCar("BMW",22,24,11000,350,2017);
+		CCar car2 = new CCar("VW",22,24,11000,350,2017);
+		CCar car3 = new CCar("Audi",22,24,11000,350,2017);
+		CPlane plane1 = new CPlane("Boing",22,24,5000,11000,350,2015,250);
 		plane1.setPassengers(220);
-		CShip ship1 = new CShip(22,24,11000,350,2010,550,"Odessa");
+		CShip ship1 = new CShip("RR",22,24,11000,350,2010,550,"Odessa");
 		ship1.setPort("Riga");
 		
         @SuppressWarnings("resource")
@@ -26,12 +35,12 @@ public class CMain{
 		    default: transport = "Не знаем такого";
             		break;
 		}   
-		System.out.println(transport);
-		System.out.println(" ");          
-		System.out.println(car1);
-		System.out.println(plane1);
-		System.out.println(ship1);
 		
+		
+		System.out.println(transport);	
+		*/
+		//car.print();
+		car.printCarByName("BMW");
 	}
 
 }

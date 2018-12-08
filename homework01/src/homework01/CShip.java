@@ -9,8 +9,8 @@ public class CShip extends CVehicle{
 			port = "";
 			passengers = 0;
 		}
-	public CShip(int x, int y, int price, int speed, int year, int passengers, String port) {		
-			super(x, y, price, speed, year);
+	public CShip(String name, int x, int y, int price, int speed, int year, int passengers, String port) {		
+			super(name, x, y, price, speed, year);
 			this.port = port;
 			this.passengers=passengers;
 		}
