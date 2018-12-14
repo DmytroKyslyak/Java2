@@ -45,23 +45,21 @@ package homework02;
 			 return studentsByFacultet;
 		 }
 		
-		 public void printSort() {
+		 public void printStudentsByFacKurs(String facultet, int kurs) {
 			 for (int i = 0; i < size(); i++) {
-				  System.out.println(student[i]); 
+				 if (student[i].getFacultet().equals(facultet) && student[i].getKurs()>=kurs) {
+					 System.out.println(student[i]); }
 			 }		 
 		 }
-		/*
-		 public SList Sort() {
-			 SList sort = new SList();
+		 public SList getStudentsByFacKurs(String facultet, int kurs) {
+			 SList studentsByFacKurs = new SList();
 			 for (int i = 0; i < size(); i++) {
-				if (student[i].getKurs()==0) {
-				 
-					 sort.add(student[i]); 
-					 }
+				 if (student[i].getFacultet().equals(facultet) && student[i].getKurs()>=kurs) {
+					 studentsByFacKurs.add(student[i]); }
 			 }		 
-			 return sort;
+			 return studentsByFacKurs;
 		 } 
-		 */
+		 
 		 
 		 
 		 
