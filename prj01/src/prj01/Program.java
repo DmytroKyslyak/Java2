@@ -3,10 +3,12 @@ package prj01;
 public class Program {
 
 	public static void main(String[] args)  {
-		/*
+		
 		System.out.println("-> "+new Object()+1+2+" x "+3*(4+5));
+		
 		Point p = new Point(1,2);
 		Point p1 = new Point(1,1);
+		
 		System.out.println(p);
 		System.out.println(p1);
 		ColorPoint cp1 = new ColorPoint(2, 3, 333333);
@@ -23,16 +25,21 @@ public class Program {
 		ColorLine cl1= new ColorLine(p, p1, 555555)	;
 		System.out.println(cl1);
 		System.out.println("****************************");
+		
 		Figure[] masObj = new Figure[4];
 		masObj[0]= p;
 		masObj[1]= cp1;
 		masObj[2]= l1;
 		masObj[3]= cl1;
 	//	masObj[4]= new Figure();
+			
+		
+		
+		
 		for (int i = 0; i < masObj.length; i++) {
 			System.out.println(masObj[i]);
 		}
-		*/
+		
 		PolyPointsDynamic poly = new PolyPointsDynamic();
 		
 		poly.add(new Point(5,9));
