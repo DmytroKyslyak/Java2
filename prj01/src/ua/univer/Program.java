@@ -42,7 +42,7 @@ public class Program {
 		ColorLine cl1= new ColorLine(p, p1, 555555)	;
 		System.out.println(cl1);
 		System.out.println("****************************Figures");
-		Figure[] masObj = FigureFactory.getListFigures(100);
+		Figure[] masObj = FigureFactory.getListFigures(5);
 		System.out.println(Arrays.toString(masObj));
 		System.out.println("****************************");
 		Point [] masPoint =  new Point[masObj.length];
@@ -62,10 +62,12 @@ public class Program {
 			ipoint++;
 			System.out.println(tp.getX());}
 		}
+		/*
 		System.out.println("********************Color");
 		for (int i = 0; i < masColor.length; i++) {
 		if(masColor[i]!=null)	System.out.println(masColor[i].getColor());
 		}
+		
 		System.out.println("********************");
 		PolyPointsDynamic poly = new PolyPointsDynamic();
 		
@@ -76,7 +78,7 @@ public class Program {
 		poly.add(new Point(19,15));
 		poly.add(new Point(1,5));
 		poly.add(new Point(11,51));
-	
+	*/
 	//	for (int i = 0; i < poly.size(); i++) {
 	//		System.out.println(poly.get(i));
 	//	}
