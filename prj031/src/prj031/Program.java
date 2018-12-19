@@ -2,6 +2,8 @@ package prj031;
 
 import java.util.Arrays;
 import java.util.Comparator;
+
+
 interface MoveAble{	
 	int move();
 }
@@ -33,6 +35,8 @@ class Car implements MoveAble, Comparable<Car>{
 		this.year = year;
 		this.name = name;
 	}
+	
+	
 	@Override
 	public int move() {		
 		return speed;
@@ -76,6 +80,8 @@ public class Program {
 		String strMas [] = {"Vasya","Petya","Alla"};
 		Arrays.sort(strMas);
 		System.out.println(Arrays.toString(strMas));
+		
+		
 		Car carMas[]  = new Car[3];
 		carMas[0]= new Car(12, "F");
 		carMas[1]= new Car(4, "A");

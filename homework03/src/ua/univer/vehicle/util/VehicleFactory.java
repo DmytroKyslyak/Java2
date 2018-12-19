@@ -9,10 +9,10 @@ public class VehicleFactory {
 
 	public static Vehicle getVehicle(int i){
 		switch (i) {
-		case 0: return new Car("BMW",22,24,11000,350,2013);
-		case 1: return new Plane("Boing",22,24,5000,11000,350,2015,250);
-		case 2: return new Ship("RR",22,24,11000,350,2010,550,"Odessa");
-		case 3: return new Car("VW",22,24,11000,350,2018);
+		case 0: return new Car("BMW", 350);
+		case 1: return new Plane("Boing", 11000);
+		case 2: return new Ship("RR", 50);
+		case 3: return new Car("VW", 250);
 		default: return null;
 		}		
 	}

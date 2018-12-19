@@ -1,5 +1,5 @@
 package ua.univer.vehicle.all;
 
-public class FlyAble {
+public class Amfibiya {
 
 }
