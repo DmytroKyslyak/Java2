@@ -4,10 +4,16 @@ import ua.univer.vehicle.Vehicle;
 
 public class Plane extends Vehicle{
 	
-	public Plane(String name, int speed) {
-		super(name, speed);
+	private int speedFly;
+	
+	public Plane(String name, int speedFly) {
+		super(name);
+		this.speedFly=speedFly;
 
 	}
-		
+	@Override
+	public String toString() {
+		return "Plane [" + super.toString() + ", speedFly=" + speedFly + "]";
+	}	
 	
 }

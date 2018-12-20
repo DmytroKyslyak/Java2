@@ -77,6 +77,8 @@ public class Program {
 		int mas [] = {1,2,-3,4,5,0};
 		Arrays.sort(mas);
 		System.out.println(Arrays.toString(mas));
+		
+		
 		String strMas [] = {"Vasya","Petya","Alla"};
 		Arrays.sort(strMas);
 		System.out.println(Arrays.toString(strMas));
@@ -89,6 +91,7 @@ public class Program {
 		Arrays.sort(carMas,(c1,c2)-> c1.getYear()-c2.getYear());
 		
 		System.out.println(Arrays.toString(carMas));
+		
 		Arrays.sort(carMas, 
 				new Comparator<Car>() {
 					@Override

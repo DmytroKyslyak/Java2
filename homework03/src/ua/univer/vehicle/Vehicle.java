@@ -1,9 +1,8 @@
 package ua.univer.vehicle;
 
-import ua.univer.vehicle.all.Car;
-import ua.univer.vehicle.all.Plane;
-import ua.univer.vehicle.all.Ship;
+import java.util.Comparator;
 
+/*
 interface MoveAble{	
 	int move();
 }
@@ -14,13 +13,13 @@ interface SwimAble{
 	int swim();
 }
 
-
-public abstract class Vehicle {
-	protected String name;
-	protected int speed;
+*/
+public class Vehicle implements Comparable<Vehicle>{
+	private String name;
 	
-	public Vehicle(String name, int speed) {
-		// TODO Auto-generated constructor stub
+	
+	public Vehicle(String name) {
+		this.name=name;
 	}
 
 	public String getName() {
@@ -30,46 +29,26 @@ public abstract class Vehicle {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public int getSpeed() {
-		return speed;
+	@Override
+	public String toString() {
+		return "Name = "+ name + "";
 	}
-
-	public void setSpeed(int speed) {
-		this.speed = speed;
-	}
-
-
-
-	public int move() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	public int compareTo(Car c) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	public int compareTo(Plane c) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	public int fly() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	public int compareTo(Ship c) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	public int swim() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
+// Сортировка по имени
 	
+	@Override
+	public int compareTo(Vehicle v) {
+		return this.name.compareTo(v.name);
+	}
+	
+	class CompareByName implements Comparator<Vehicle>{
+
+		@Override
+		public int compare(Vehicle v1, Vehicle v2) {
+			return v1.getName().compareTo(v2.getName());
+		}
 }
+
+
+
+}
+
