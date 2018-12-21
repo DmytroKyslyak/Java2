@@ -3,7 +3,6 @@ package prj031;
 import java.util.Arrays;
 import java.util.Comparator;
 
-
 interface MoveAble{	
 	int move();
 }
@@ -41,6 +40,8 @@ class Car implements MoveAble, Comparable<Car>{
 	public int move() {		
 		return speed;
 	}
+	
+	
 	@Override
 	public int compareTo(Car c) {		
 		return this.name.compareTo(c.name);
@@ -103,5 +104,7 @@ public class Program {
 		System.out.println(Arrays.toString(carMas));
 		
 	}
-
+	
+	
+	
 }

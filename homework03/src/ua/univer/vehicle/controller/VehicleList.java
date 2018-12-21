@@ -1,51 +1,20 @@
 package ua.univer.vehicle.controller;
 
-import ua.univer.vehicle.all.Car;
+import ua.univer.vehicle.Vehicle;
+import ua.univer.vehicle.util.VehicleFactory;
 
 public class VehicleList {
 
+	Vehicle[] masObj = VehicleFactory.getListVehicle(5);
+	
+	public static Vehicle maxSpeed(Vehicle[] masObj) {
+		int maxSpeed = 0;
+		Vehicle max = null;
+		for (int i = 0; i < masObj.length; i++) {
+			if (masObj[i].getSpeed() > maxSpeed) {
+				maxSpeed = masObj[i].getSpeed();
+				max = masObj[i];}}
+		return max;
+	}
 
-	private Car[] cars;
-	private int count;
-	
-	
-	public VehicleList() {
-		cars = new Car[5];
-		count=-1;
-	}
-	public void add(Car c) {
-		cars[++count] = c;
-	}
-	public Car get(int i){
-		if(i<size())
-		return cars[i];
-		else return null;
-	}
-	public void set(int i,Car c) {
-		if(i<size())
-			cars[i] = c;
-	}
-	public int size() {
-		return count+1;
-	}
-	 public void print() {
-			for (int i = 0; i < size(); i++) {		
-				System.out.println(cars[i]);
-			}
-	
-	 }
-	 public void printCarByName(String name) {
-		 for (int i = 0; i < size(); i++) {
-			 if (cars[i].getName().equals(name)) {
-				 System.out.println(cars[i]); }
-		 }		 
-	 }
-	 public VehicleList getCarByName(String name) {
-		 VehicleList carByName = new VehicleList();
-		 for (int i = 0; i < size(); i++) {
-			 if (cars[i].getName().equals(name)) {
-				 carByName.add(cars[i]); }
-		 }		 
-		 return carByName;
-	 }
 }

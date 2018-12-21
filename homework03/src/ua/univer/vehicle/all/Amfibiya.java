@@ -2,20 +2,23 @@ package ua.univer.vehicle.all;
 
 import ua.univer.vehicle.Vehicle;
 
-public class Amfibiya extends Vehicle{
+public class Amfibiya extends Vehicle implements MoveAble, SwimAble{
 	
-	private int speedMov;
-	private int speedSwim;
-
-	public Amfibiya(String name, int speedMov, int speedSwim) {
-		super(name);
-		this.speedMov=speedMov;
-		this.speedSwim=speedSwim;
+	public Amfibiya(String name, int speed) {
+		super(name, speed);
 	}
-
 	@Override
 	public String toString() {
-		return "Amfibiya [" + super.toString() + ", speedMov=" + speedMov + ", speedSwim=" + speedSwim + "]";
+		return "Amfibiya [" + super.toString() + "]";
+	}
+	
+	@Override
+	public void move() {
+		System.out.println(getClass().getName() + " едет");
+	}
+	@Override
+	public void swim() {
+		System.out.println(getClass().getName() + " плывет");
 	}
 }
 

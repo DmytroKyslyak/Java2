@@ -2,24 +2,23 @@ package ua.univer.vehicle;
 
 import java.util.Comparator;
 
-/*
-interface MoveAble{	
-	int move();
-}
-interface FlyAble{	
-	int fly();
-}
-interface SwimAble{	
-	int swim();
-}
-
-*/
 public class Vehicle implements Comparable<Vehicle>{
 	private String name;
+	private int speed;
 	
+
 	
-	public Vehicle(String name) {
+	public Vehicle(String name, int speed) {
 		this.name=name;
+		this.speed=speed;
+	}
+
+	public int getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
 	}
 
 	public String getName() {
@@ -31,7 +30,7 @@ public class Vehicle implements Comparable<Vehicle>{
 	}
 	@Override
 	public String toString() {
-		return "Name = "+ name + "";
+		return "Name = "+ name + ",Speed = "+ speed + "";
 	}
 // Сортировка по имени
 	
@@ -47,8 +46,17 @@ public class Vehicle implements Comparable<Vehicle>{
 			return v1.getName().compareTo(v2.getName());
 		}
 }
+	// Сортировка по скорости
+	
+	class CompareBySpeed implements Comparator<Vehicle>{
 
-
-
+		@Override
+		public int compare(Vehicle v1, Vehicle v2) {
+			// TODO Auto-generated method stub
+			return v1.getSpeed()-v2.getSpeed();
+		}
+	}
 }
+
+
 

@@ -14,8 +14,8 @@ public class VehicleFactory {
 		case 0: return new Car("BMW", 350);
 		case 1: return new Plane("Boing", 11000);
 		case 2: return new Ship("RR", 50);
-		case 3: return new Amfibiya("AA", 150, 70);
-		case 4: return new Batmobile("BATMAN", 500, 500, 500);
+		case 3: return new Amfibiya("AA", 150);
+		case 4: return new Batmobile("BATMAN", 500);
 		default: return null;
 		}		
 	}
