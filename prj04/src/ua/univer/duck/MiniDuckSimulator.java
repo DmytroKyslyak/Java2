@@ -10,6 +10,10 @@ public class MiniDuckSimulator {
 		Duck readhead = new RedheadDuck();
 		readhead.performQuack();
 		readhead.performFly();
+		
+		Duck rubber = new RubberDuck();
+		rubber.performQuack();
+		rubber.performFly();
 	}
 
 }
