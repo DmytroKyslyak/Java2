@@ -7,7 +7,7 @@ public class RubberDuck extends Duck{
 		flyBehavior = new FlyNoWay();
 	}
 	public void display() {
-		System.out.println("I am a real RubberDuck");
+		System.out.println("--------I am a real RubberDuck--------");
 	}
 
 }
