@@ -11,11 +11,11 @@ public class Map {
 	Statement stmt;
 public Map() throws Exception {
 	Class.forName("com.mysql.jdbc.Driver");
-	con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/mapdb", "root", "root");
+	con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/mapdb", "root", "1");
 	stmt= con.createStatement();
 }
 public void show() throws SQLException{
-	String sql = "SELECT * FROM coutries";
+	String sql = "SELECT * FROM countries";
 	ResultSet res = stmt.executeQuery(sql);
 	while(res.next()){
 		int id =res.getInt("ID_CO");
@@ -25,12 +25,12 @@ public void show() throws SQLException{
 	}
 }
 public void addCountry(Country country) throws SQLException{
-	String sql = "insert into coutries values("+country.getId()+", '"+country.getName()+"')";
+	String sql = "insert into countries values("+country.getId()+", '"+country.getName()+"')";
 	stmt.executeUpdate(sql);
 }
 
 public void deleteCountry(String name) throws SQLException{
-	String sql = "DELETE FROM coutries WHERE name='"+name+"'";
+	String sql = "DELETE FROM countries WHERE name='"+name+"'";
 	stmt.executeUpdate(sql);
 }
 }
