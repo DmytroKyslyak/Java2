@@ -1,0 +1,67 @@
+по лабораторной 2 дл€ любой варианта реализовать работу с Ѕƒ
+
+дл€ метеостанции записывать текущие показани€ в Ѕƒ
+
+
+в статистике прочитать из бд данные и вывести среднее макс мин значени€
+
+в прогнозе  расчитать прогнозное значение
+
+pogodadb
+
+CREATE DATABASE pogodadb;
+
+USE pogodadb;
+
+CREATE TABLE weather
+(CITY CHAR(32),
+T SMALLINT,
+H SMALLINT,
+P SMALLINT);
+
+ALTER TABLE weather;
+
+INSERT INTO weather VALUES (СRomaТ, 25, 85, 760);
+
+SELECT * FROM weather;
+
+
+alter table 'weather' drop column 'ID_WE';
+mysql_query("alter table weather drop column ID_WE");
+
+univerdb
+
+CREATE TABLE GROUPS
+(ID_GR INTEGER NOT NULL,
+NAME CHAR(32));
+
+CREATE TABLE STUDENTS
+(ID_ST INTEGER NOT NULL,
+ID_GR INTEGER NOT NULL,
+NAME CHAR(32),
+SURNAME CHAR(32),
+YEARS SMALLINT
+);
+
+ALTER TABLE GROUPS
+ADD PRIMARY KEY (ID_GR);
+
+ALTER TABLE STUDENTS
+ADD PRIMARY KEY (ID_ST);
+
+ALTER TABLE STUDENTS
+ADD FOREIGN KEY (ID_GR)
+REFERENCES GROUPS (ID_GR);
+
+INSERT INTO GROUPS VALUES (1, СJavaТ);
+INSERT INTO GROUPS VALUES (2, СC++Т);
+INSERT INTO GROUPS VALUES (3, СC#Т);
+
+INSERT INTO STUDENTS VALUES (1, 1, СSMIRNOFFТ, СIVANТ, 25);
+INSERT INTO STUDENTS VALUES (2, 1, СDANIELSТ, СJackТ, 21);
+INSERT INTO STUDENTS VALUES (3, 2, СJamsonsТ, СPatricТ, 22);
+INSERT INTO STUDENTS VALUES (4, 3, СMarlyТ, СBobТ, 21);
+
+SELECT * FROM STUDENTS T1
+INNER JOIN GROUPS T2
+ON T1.ID_GR = T2.ID_GR;
