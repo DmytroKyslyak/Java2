@@ -1,21 +1,22 @@
 package ua.univer.Enum;
 
 enum DayOfWeek{
-	Monday, Tuesday, Wednesday;
+	Monday("Monday"),Tuesday,Wednesday;
 	String name;
-	private DayOfWeek() {
+	private DayOfWeek() {		
+	}
+	private DayOfWeek(String name) {
 		this.name = name;
 	}
 	@Override
 	public String toString() {
-		return name;
+		return name;		
 	}
 }
-
 public class EnumExample {
+
 	public static void main(String[] args) {
-		DayOfWeek Monday = new DayOfWeek.Monday;
-		System.out.println(Monday);
+		DayOfWeek Monday = DayOfWeek.Monday;		
 	}
 
 }
