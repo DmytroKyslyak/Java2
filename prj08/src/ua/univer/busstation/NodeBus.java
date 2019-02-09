@@ -5,9 +5,12 @@ public class NodeBus {
 		data = bus;
 		next = null;
 	}
-	private Bus data;	
+
+	private Bus data;
+
 	public Bus getData() {
 		return data;
 	}
+
 	public NodeBus next;
 }

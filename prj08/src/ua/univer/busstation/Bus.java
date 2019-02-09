@@ -1,10 +1,10 @@
 package ua.univer.busstation;
 
 public class Bus {
-	private int number;	
+	private int number;
 	private String name;
 	private int route;
-	
+
 	public Bus(int number, String name, int route) {
 		super();
 		this.number = number;
@@ -40,5 +40,5 @@ public class Bus {
 	public String toString() {
 		return "Bus [number=" + number + ", name=" + name + ", route=" + route + "]";
 	}
-	
+
 }

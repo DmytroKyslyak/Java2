@@ -2,7 +2,7 @@ package ua.univer.busstation;
 
 public class Program {
 	public static void main(String[] args) {
-		ListNodeBus autopark =  new ListNodeBus();
+		ListNodeBus autopark = new ListNodeBus();
 		autopark.addFirst(new Bus(1, "Vasya", 11));
 		autopark.addFirst(new Bus(2, "Basya", 11));
 		autopark.addFirst(new Bus(3, "Tasya", 11));
