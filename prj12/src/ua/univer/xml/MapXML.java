@@ -27,6 +27,7 @@ import org.xml.sax.SAXParseException;
 
 import ua.univer.database.City;
 import ua.univer.database.Country;
+
 class SimpleErrorHandler implements ErrorHandler { 
     public void warning(SAXParseException e) throws SAXException { 
         System.out.println(e.getMessage()); 

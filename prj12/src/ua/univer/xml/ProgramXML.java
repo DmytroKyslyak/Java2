@@ -8,7 +8,6 @@ import org.xml.sax.SAXParseException;
 
 import ua.univer.database.City;
 import ua.univer.database.Country;
-import ua.univer.database.Map;
 
 
 public class ProgramXML {
@@ -16,7 +15,7 @@ public class ProgramXML {
 	public static void main(String[] args) {
 		
 		Country country= new Country(1, "UA");
-		City city = new City(1, "Kiev", true, 2000, country);
+		City city = new City(1, "Kiev", true, 2000, null);
 	    
 		MapXML map = new MapXML();
 		try {
